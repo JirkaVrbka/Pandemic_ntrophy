@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPaneBackground" fx:id="anchorPaneBackground" prefHeight="658.0" prefWidth="1335.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pandemic.FX.FXMLDocumentController">
+    <children>
+      <BorderPane prefHeight="658.0" prefWidth="1373.0">
+         <left>
+            <Pane fx:id="panePlayer" prefHeight="600.0" prefWidth="332.0" BorderPane.alignment="CENTER">
+               <children>
+                    <Button fx:id="buttonPlay" layoutX="107.0" layoutY="74.0" prefHeight="25.0" prefWidth="76.0" text="Spustit" />
+                  <Slider fx:id="sliderCure" layoutX="45.0" layoutY="410.0" prefHeight="14.0" prefWidth="200.0" value="20.0" />
+                  <Slider fx:id="sliderInfectivity" layoutX="45.0" layoutY="440.0" prefHeight="14.0" prefWidth="200.0" />
+                  <Label fx:id="labelInfoSick" layoutX="180.0" layoutY="315.0" text="infoSick" />
+                  <Label fx:id="labelInfoHealthy" layoutX="180.0" layoutY="275.0" text="infoHealthy" />
+                  <Label fx:id="labelInfoAll" layoutX="180.0" layoutY="335.0" text="infoAll" />
+                  <Label fx:id="labelInfoDead" layoutX="180.0" layoutY="295.0" text="infoDead" />
+                  <Button fx:id="buttonStop" layoutX="107.0" layoutY="108.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="Pauza" />
+                  <Label fx:id="labelInfoStatus" layoutX="180.0" layoutY="255.0" text="infoStatus" />
+                  <Slider fx:id="sliderSpeed" layoutX="44.0" layoutY="470.0" max="10.0" min="-10.0" prefHeight="14.0" prefWidth="200.0" />
+                  <Slider fx:id="sliderMortality" layoutX="44.0" layoutY="500.0" majorTickUnit="10.0" max="2000.0" minorTickCount="10" prefHeight="14.0" prefWidth="200.0" snapToTicks="true" />
+                  <Button fx:id="buttonOneStep" layoutX="107.0" layoutY="142.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="1 krok" />
+                  <Button fx:id="buttonReset" layoutX="107.0" layoutY="176.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="Reset" />
+                  <Label layoutX="75.0" layoutY="275.0" text="Zdravi" />
+                  <Label layoutX="60.0" layoutY="29.0" text="Ntrophy - logika" textAlignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="105.0" layoutY="213.0" text="Informace">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="75.0" layoutY="255.0" text="Status" />
+                  <Label layoutX="75.0" layoutY="295.0" text="Mrtvi" />
+                  <Label layoutX="75.0" layoutY="315.0" text="Nemocni" />
+                  <Label layoutX="75.0" layoutY="335.0" text="Vsichni" />
+                  <Label layoutX="104.0" layoutY="372.0" text="Posuvniky">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="75.0" layoutY="235.0" text="Day" />
+                  <Label fx:id="labelInfoDay" layoutX="180.0" layoutY="235.0" text="infoDay" />
+                  <Label fx:id="labelInfoSliderCure" layoutX="310.0" layoutY="410.0" text="Info" />
+                  <Label fx:id="labelInfoSliderInfectivity" layoutX="310.0" layoutY="440.0" text="Info" />
+                  <Label fx:id="labelInfoSliderSpeed" layoutX="310.0" layoutY="470.0" text="Info" />
+                  <Label fx:id="labelInfoSliderMortality" layoutX="310.0" layoutY="500.0" text="Info" />
+                  <Button fx:id="buttonCureDiffDecrease" layoutX="12.0" layoutY="405.0" mnemonicParsing="false" text="&lt;" />
+                  <Button fx:id="buttonInfectivityDecrease" layoutX="13.0" layoutY="435.0" mnemonicParsing="false" text="&lt;" />
+                  <Button fx:id="buttonSpeedDecrease" layoutX="12.0" layoutY="465.0" mnemonicParsing="false" text="&lt;" />
+                  <Button fx:id="buttonMortalityDecrease" layoutX="12.0" layoutY="495.0" mnemonicParsing="false" text="&lt;" />
+                  <Button fx:id="buttonCureDiffIncrease" layoutX="252.0" layoutY="405.0" mnemonicParsing="false" text="&gt;" />
+                  <Button fx:id="buttonInfectivityIncrease" layoutX="252.0" layoutY="435.0" mnemonicParsing="false" text="&gt;" />
+                  <Button fx:id="buttonSpeedIncrease" layoutX="252.0" layoutY="465.0" mnemonicParsing="false" text="&gt;" />
+                  <Button fx:id="buttonMortalityIncrease" layoutX="252.0" layoutY="495.0" mnemonicParsing="false" text="&gt;" />
+                  <Separator layoutX="358.0" layoutY="13.0" orientation="VERTICAL" prefHeight="554.0" prefWidth="15.0" />
+                  <Button fx:id="buttonDestinationIncrease1" layoutX="252.0" layoutY="525.0" mnemonicParsing="false" text="&gt;" />
+                  <Button fx:id="buttonDestinationDecrease" layoutX="13.0" layoutY="525.0" mnemonicParsing="false" text="&lt;" />
+                  <Label fx:id="labelInfoSliderDestination" layoutX="310.0" layoutY="530.0" text="Info" />
+                  <Slider fx:id="sliderDestination" layoutX="44.0" layoutY="530.0" majorTickUnit="10.0" minorTickCount="10" prefHeight="14.0" prefWidth="200.0" snapToTicks="true" />
+               </children>
+            </Pane>
+         </left>
+         <right>
+            <Pane prefHeight="600.0" prefWidth="322.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane fx:id="paneDebug" prefHeight="548.0" prefWidth="292.0" visible="false">
+                     <children>
+                        <Label layoutX="95.0" layoutY="14.0" text="DEGUB" textAlignment="CENTER">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="30.0" layoutY="140.0" text="Type" />
+                        <Label fx:id="labelDebugDiseaseType" layoutX="173.0" layoutY="140.0" text="NO DEBUG INFO" />
+                        <Label layoutX="35.0" layoutY="418.0" text="= infectivity" />
+                        <Label layoutX="35.0" layoutY="441.0" text="= speed" />
+                        <Label layoutX="35.0" layoutY="465.0" text="= mortality" />
+                        <Label fx:id="labelDebugInfectivityValue" layoutX="150.0" layoutY="418.0" text="NO DEBUG INFO" />
+                        <Label fx:id="labelDebugSpeedValue" layoutX="150.0" layoutY="441.0" text="NO DEBUG INFO" />
+                        <Label fx:id="labelDebugMortalityValue" layoutX="150.0" layoutY="465.0" text="NO DEBUG INFO" />
+                        <Label layoutX="30.0" layoutY="50.0" text="Round" />
+                        <Label fx:id="labelDebugRound" layoutX="170.0" layoutY="50.0" text="NO DEBUG INFO" />
+                        <Label layoutX="100.0" layoutY="110.0" text="Disease" textAlignment="CENTER">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="30.0" layoutY="160.0" text="Infectivity" />
+                        <Label fx:id="labelDebugDiseaseInfectivity" layoutX="173.0" layoutY="160.0" text="NO DEBUG INFO" />
+                        <Label fx:id="labelDebugDiseaseMortality" layoutX="173.0" layoutY="180.0" text="NO DEBUG INFO" />
+                        <Label layoutX="30.0" layoutY="180.0" text="Mortality" />
+                        <Label fx:id="labelDebugCureValue" layoutX="150.0" layoutY="386.0" text="NO DEBUG INFO" />
+                        <Label layoutX="35.0" layoutY="386.0" text="= cure diff" />
+                        <Label layoutX="30.0" layoutY="231.0" text="Cure progress" />
+                        <Label fx:id="labelDebugCureProgress" layoutX="173.0" layoutY="231.0" text="NO DEBUG INFO" />
+                        <Label fx:id="labelDebugCureSpeed" layoutX="173.0" layoutY="251.0" text="NO DEBUG INFO" />
+                        <Label layoutX="30.0" layoutY="251.0" text="Cure speed" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="paneNotepad" layoutX="-30.0" layoutY="1.0" prefHeight="599.0" prefWidth="322.0">
+                     <children>
+                        <Label layoutX="83.0" layoutY="14.0" text="Poznamky">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="83.0" layoutY="48.0" text="Informace o hre" textAlignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelGameInfo" layoutX="124.0" layoutY="84.0" text="Label" visible="false" />
+                        <Label layoutX="107.0" layoutY="170.0" text="Vase tipy">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="30.0" layoutY="200.0" text="Nemoc 1" />
+                        <Label layoutX="30.0" layoutY="225.0" text="Nemoc 2" />
+                        <Label layoutX="30.0" layoutY="250.0" text="Nemoc 3" />
+                        <Label layoutX="30.0" layoutY="275.0" text="Nemoc 4" />
+                        <Label layoutX="30.0" layoutY="300.0" text="Nemoc 5" />
+                        <Label layoutX="30.0" layoutY="325.0" text="Nemoc 6" />
+                        <Label layoutX="30.0" layoutY="350.0" text="Nemoc 7" />
+                        <TextField layoutX="101.0" layoutY="197.0" />
+                        <TextField layoutX="101.0" layoutY="220.0" />
+                        <TextField layoutX="101.0" layoutY="245.0" />
+                        <TextField layoutX="101.0" layoutY="270.0" />
+                        <TextField layoutX="101.0" layoutY="295.0" />
+                        <TextField layoutX="101.0" layoutY="320.0" />
+                        <TextField layoutX="101.0" layoutY="345.0" />
+                        <TextField layoutX="106.0" layoutY="495.0" />
+                        <TextField layoutX="106.0" layoutY="465.0" />
+                        <TextField layoutX="106.0" layoutY="435.0" />
+                        <TextField layoutX="106.0" layoutY="405.0" />
+                        <Label layoutX="30.0" layoutY="500.0" text="Posuvnik 4" />
+                        <Label layoutX="30.0" layoutY="470.0" text="Posuvnik 3" />
+                        <Label layoutX="30.0" layoutY="440.0" text="Posuvnik 2" />
+                        <Label layoutX="30.0" layoutY="410.0" text="Posuvnik 1" />
+                        <Label layoutX="30.0" layoutY="530.0" text="Posuvnik 5" />
+                        <TextField layoutX="106.0" layoutY="525.0" />
+                        <Separator layoutY="2.0" orientation="VERTICAL" prefHeight="566.0" prefWidth="4.0" />
+                        <Hyperlink fx:id="hyperlinkInfoRules" ellipsisString="https://docs.google.com/document/d/1VGDc8NTc_VWKS3_ApZ0GeE6Dp36aGCtCiTFFfHKyC-A/pub" layoutX="91.0" layoutY="88.0" text="Online pravidla" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </right>
+         <top>
+            <TabPane fx:id="tabPane" blendMode="OVERLAY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="1368.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab fx:id="tabDiseaseFlu" closable="false" text="Nemoc 1" />
+                <Tab fx:id="tabDiseasePatogen" closable="false" text="Nemoc 2" />
+                  <Tab fx:id="tabDiseaseDiabetes" closable="false" text="Nemoc 3">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                  <Tab fx:id="tabDiseaseRadiation" closable="false" text="Nemoc 4">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                  <Tab fx:id="tabDiseaseRage" closable="false" text="Nemoc 5">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                  <Tab fx:id="tabDiseaseZombie" closable="false" text="Nemoc 6">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                  <Tab fx:id="tabDiseaseLover" closable="false" text="Nemoc 7">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </top>
+         <center>
+            <Canvas id="Playground" fx:id="canvasPlayground" height="600.0" width="600.0" BorderPane.alignment="CENTER" />
+         </center>
+         <bottom>
+            <Pane prefHeight="20.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ProgressBar fx:id="progressBarCureProgress" layoutX="369.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="20.0" prefWidth="649.0" progress="0.0" />
+                  <Label fx:id="labelInfoCurePercent" layoutX="719.0" layoutY="3.0" text="0%" />
+               </children>
+            </Pane>
+         </bottom>
+      </BorderPane>
+    </children>
+</AnchorPane>
